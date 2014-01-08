@@ -15,3 +15,7 @@ To stop
     ps aux | grep autobrightness
 2. Get PID and execute the following command:
     kill YOUR_PID
+
+Questions
+==============
+https://twitter.com/billyboar
