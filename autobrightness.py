@@ -35,6 +35,7 @@ if len(sys.argv) >= 2:
                 except:
                 	if arg == "help" or arg == "--help" or arg == "-help":
 	                	print "USAGE: autobrightness [TIME BETWEEN SAMPLES]... [CONFIG FILE]...\n Adjusts a laptop's brightness automatically, by using camera samples taken at a user definable interval."
+	                	exit()
                 	cfg_file = arg
 
 
