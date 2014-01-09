@@ -35,13 +35,11 @@ def takeSample(tmpimg):
 
 class autoBrightness():
 	def __init__(self, samplerate=config_file['samplerate']):
-		#self.samplerate = config_file['samplerate']
 		self.samplerate = samplerate
 		while True:
 			tmpimg = "/tmp/autobrightness-sample.bmp"
 			takeSample(tmpimg)
 			brightnessLevel = brightness(tmpimg)
-			#os.remove(tmpimg)
 			set = (brightnessLevel/255)*100
 			os.system('xbacklight -set '+str(set))
 			time.sleep(self.samplerate)	
@@ -49,8 +47,6 @@ class autoBrightness():
 
 if __name__ == "__main__":
 	
-	#for x in sys.argv:
-	#	print x
 
 	args = sys.argv
 	if len(args) >= 2:
