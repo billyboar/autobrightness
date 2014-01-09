@@ -23,16 +23,23 @@ def camera(tmpimg):
 	pygame.image.save(img, tmpimg)
 	pygame.camera.quit()
 	cam.stop()
+	
+samplerate = 5
+if len(sys.argv) >= 2:
+	for arg in sys.argv:
+		try:
+                        samplerate = float(arg)
+                except:
+                	cfg_file = arg
+                		
+                        
 
 while True:
 	tmpimg = "/tmp/autobrightness-sample.bmp"
 	camera(tmpimg)
 	a = brightness(tmpimg)
 	os.remove(tmpimg)
-	set = (a*100)/110
+	set = (a*100)/255
 	os.system('xbacklight -set '+str(set))
-	samplerate = 5
-	if len(sys.argv) >= 2:
-		samplerate = float(sys.argv[1])
 	time.sleep(samplerate)
 
