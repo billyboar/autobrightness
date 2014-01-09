@@ -1,7 +1,7 @@
 autobrightness
 ==============
 
-Brightness adjustor depending on one's sitting environment
+Adjusts a laptop's brightness automatically, by using camera samples taken at a user definable interval.
 
 
 
