@@ -31,6 +31,8 @@ while True:
 	os.remove(tmpimg)
 	set = (a*100)/110
 	os.system('xbacklight -set '+str(set))
-	samplerate = float(sys.argv[1])
+	samplerate = 5
+	if len(sys.argv) >= 2:
+		samplerate = float(sys.argv[1])
 	time.sleep(samplerate)
 
