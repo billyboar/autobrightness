@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 			if args[i] == "-s" or args[i] == "--set":
 				default_config['samplerate'] = args[i+1]
-				print default_config['samplerate']
+				print "Your default time interval is now '%s' seconds" % args[i+1]
 				json.dump(default_config, open('config.json', 'w'))
 				exit()
 
