@@ -23,10 +23,12 @@ def camera():
 	cam = pygame.camera.Camera(pygame.camera.list_cameras()[0])
 	cam.start()
 	img = cam.get_image()
+	tmpimg = "/tmp/autobrightness-sample.bmp"
 	import pygame.image
-	pygame.image.save(img, "photo.bmp")
+	pygame.image.save(img, tmpimg)
 	pygame.camera.quit()
 	cam.stop()
+	os.remove(tmpimg)
 
 while True:
 	camera()
