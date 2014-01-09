@@ -33,7 +33,7 @@ if len(sys.argv) >= 2:
                         	print "Your sampling rate cannot be a negative number.  Resetting to default value of 5."
                         	samplerate = 5.0
                 except:
-                	if arg == "help" or arg == "--help" or arg = "-help":
+                	if arg == "help" or arg == "--help" or arg == "-help":
 	                	print "USAGE: autobrightness [TIME BETWEEN SAMPLES]... [CONFIG FILE]...\n Adjusts a laptop's brightness automatically, by using camera samples taken at a user definable interval."
                 	cfg_file = arg
 
@@ -41,9 +41,9 @@ if len(sys.argv) >= 2:
 while True:
 	tmpimg = "/tmp/autobrightness-sample.bmp"
 	takeSample(tmpimg)
-	a = brightness(tmpimg)
-	os.remove(tmpimg)
-	set = (a/255)*100
+	brightnessLevel = brightness(tmpimg)
+	#os.remove(tmpimg)
+	set = (brightnessLevel/255)*100
 	os.system('xbacklight -set '+str(set))
 	time.sleep(samplerate)
 
