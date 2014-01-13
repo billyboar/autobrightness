@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=wildguppy-gtk
+Name=wildguppy
+Comment=Adjusts a laptop's brightness automatically, by using camera samples taken at a user definable interval.
+Icon=/opt/wildguppy/icon/fish_large.png
+Categories=Utility;GTK;GNOME;
