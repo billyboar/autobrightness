@@ -1,20 +1,12 @@
-autobrightness
+WildGuppy
 ==============
 
-Adjusts a laptop's brightness automatically, by using camera samples taken at a user definable interval.
+Adjusts a laptop's brightness automatically, by using camera samples taken at a user definable interval. Also you can set brightness at desired level (from 0 to 100) easily from your panel.
 
-
-
-To install
+further imformation, screenshots and downloads links:
 ==============
-sh install.sh
 
-To stop
-==============
-1. type in your terminal the following command:
-    ps aux | grep autobrightness
-2. Get PID and execute the following command:
-    kill YOUR_PID
+http://thecutestgeek.com/wildguppy
 
 Questions
 ==============
