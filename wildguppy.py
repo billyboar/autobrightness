@@ -8,11 +8,11 @@ import sys
 import json
 
 
-default_samplerate = 5.0
+default_samplerate = 5
 fixed = False
 home_path = os.getenv("HOME")
 file_path = home_path + "/.config/wildguppy/config.json"
-default_config = {'samplerate':default_samplerate, 'maxbrightness':100, 'minbrightness':0}
+default_config = {'samplerate':str(default_samplerate), 'maxbrightness':"100", 'minbrightness':"0"}
 
 try:
     config_file = json.load(open(file_path))
