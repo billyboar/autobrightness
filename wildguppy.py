@@ -12,8 +12,16 @@ default_samplerate = 5.0
 fixed = False
 home_path = os.getenv("HOME")
 file_path = home_path + "/.config/wildguppy/config.json"
-config_file = json.load(open(file_path))
 default_config = {'samplerate':default_samplerate, 'maxbrightness':100, 'minbrightness':0}
+
+try:
+    config_file = json.load(open(file_path))
+except:
+    os.system("mkdir %s/.config/wildguppy/" % home_path)
+    os.system("touch %s" % file_path)
+    json.dump(default_config, open(file_path, 'w'))
+    config_file = json.load(open(file_path))
+    
 maxbr = float(config_file['maxbrightness'])
 minbr = float(config_file['minbrightness'])
 
