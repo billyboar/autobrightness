@@ -45,7 +45,10 @@ class mainWindow(Gtk.Window):
                 int(self.entry2.get_text())
                 int(self.entry3.get_text())
             except ValueError:
-                self.label4.set_text("Numbers only!")
+                if isinstance(float(self.entry1.get_text()), float):
+                    self.label4.set_text("Enter natural number for time")
+                else:
+                    self.label4.set_text("Numbers only!")
                 return
             
             if int(self.entry2.get_text()) <= int(self.entry3.get_text()):
