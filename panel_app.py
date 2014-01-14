@@ -62,7 +62,6 @@ quitItem.show()
 
 program = wildguppy.autoBrightness()
 samplerate = int(wildguppy.config_file['samplerate'])
-#maxbr = minbr = 0
 maxbr_global = int(wildguppy.config_file['maxbrightness'])
 minbr_global = int(wildguppy.config_file['minbrightness'])
 
