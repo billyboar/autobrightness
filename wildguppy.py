@@ -64,13 +64,14 @@ class autoBrightness():
         tmpimg = "/tmp/autobrightness-sample.jpg"
         tmpScreenImg = "/tmp/autobrightness-screen-sample.jpg"
         takeSample(tmpimg)
-        takeScreeenSample(tmpScreenImg)
+        #takeScreeenSample(tmpScreenImg)
         brightnessLevel = brightness(tmpimg)
-        ScreenbrightnessLevel = brightness(tmpScreenImg)
+        #ScreenbrightnessLevel = brightness(tmpScreenImg)
         print brightnessLevel
-        print ScreenbrightnessLevel
-        set = (brightnessLevel + 255 - ScreenbrightnessLevel)/2.0/255
-        new_set = self.minbr_ + (self.maxbr_ - self.minbr_)*set
+        #print ScreenbrightnessLevel
+        #set = (brightnessLevel + 255 - ScreenbrightnessLevel)/2.0/255
+        #new_set = self.minbr_ + (self.maxbr_ - self.minbr_)*set
+        new_set = (brightnessLevel * 100)/120
         print "\n"
         print new_set
         os.system('xbacklight -set %s' % str(new_set))
