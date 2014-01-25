@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import appindicator
-import pynotify
 import gtk
 import os
 import wildguppy
