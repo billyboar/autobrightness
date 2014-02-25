@@ -65,7 +65,7 @@ class AutoBrightnessIndicator():
 
     def startProgram(self, widget):
         """Start the sampling and brightness setting"""
-        self.ind.set_icon(self.script_dir + "/fish_alt.png")
+        self.ind.set_icon(self.script_dir + "/fish.png")
         config_file = load(open(self.config_path))
         self.program.samplerate = int(config_file['samplerate'])
         self.program.maxbr_ = int(config_file['maxbrightness'])
