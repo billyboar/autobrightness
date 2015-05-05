@@ -7,3 +7,4 @@ Name=wildguppy
 Comment=Adjusts a laptop's brightness automatically, by using camera samples taken at a user definable interval.
 Icon=/opt/wildguppy/icon/fish_large.png
 Categories=Utility;GTK;GNOME;
+Keywords=screen;brightness;camera;lcd;panel;darkness;lightness;adjust;dimmer;webcam;
